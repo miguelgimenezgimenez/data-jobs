@@ -8,18 +8,8 @@ from src.clean import merge_csv_data
 from src.report import save_city_plots
 from services.mail import send_email
 import re
+from utils.terminal import bcolors
 
-
-
-class bcolors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
 
 # https://docs.python.org/3/library/argparse.html
 
