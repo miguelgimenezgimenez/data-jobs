@@ -25,3 +25,15 @@ Service added to send mails to the provided email with the info for the city req
 
 
 `python3 main.py -m -f Madrid`  =>  Merge data from a given file. 
+
+
+### Tech Stack:
+
+-argparse for main program.
+
+-Selenium and beautifull soup for scrapping glassdoor.
+
+-smtplib and sendgrid for email service.
+
+
+
