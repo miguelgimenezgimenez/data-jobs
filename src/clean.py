@@ -41,10 +41,10 @@ def get_city(city):
     return city
 
 
-def merge_csv_data(args):
+def merge_csv_data(filename):
     df = pd.read_csv('./input/world_data.csv')
 
-    file_to_merge = pd.read_csv(f'./input/{args.filename}.csv')
+    file_to_merge = pd.read_csv(f'./input/{filename}.csv')
     file_to_merge['tags'] = file_to_merge['title'].map(get_tag)
     file_to_merge['city'] = file_to_merge['city'].map(get_city)
     df = df.append(file_to_merge)

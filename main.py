@@ -54,7 +54,7 @@ def print_city_stats(args):
         send_email(table, city)
 
 def merge_file(filename):
-  merge_csv_data(args.url, filename)
+  merge_csv_data( filename)
 
 
 def scrape_url(args):
