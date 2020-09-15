@@ -37,3 +37,8 @@ Service added to send mails to the provided email with the info for the city req
 
 
 
+### Sample email graphs:
+Email received for Madrid will look like this: 
+
+
+![alt text](output/Madrid.png "Title")
