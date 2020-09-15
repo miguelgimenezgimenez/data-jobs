@@ -53,42 +53,37 @@ def print_city_stats(args):
         save_city_plots(city)
         send_email(table, city)
 
-def merge_file(args):
-  filename = args.filename
-  if not filename:
-    filename = input(
-                f"Enter filename")
+def merge_file(filename):
   merge_csv_data(args.url, filename)
-
 
 
 def scrape_url(args):
     filename = args.filename
     if not filename:
-        filename = input(f"Enter filename: ")
+        filename = input(f"Enter filename to create with scraped data: ")
         get_jobs(args.url, filename)
 
 
 def main():
     parser = argparse.ArgumentParser(description='Get data jobs info')
 
-    parser.add_argument('-city', dest='city',
+    parser.add_argument('--city', dest='city',
                         help='City that you want to get data jobs from')
 
-    parser.add_argument('-clist', dest='city_list', action="store_true",
+    parser.add_argument('-l', dest='city_list', action="store_true",
                         help='List of cities there is data')
 
-    parser.add_argument('-stats', dest='stats', action="store_true",
+    parser.add_argument('--stats', dest='stats', action="store_true",
                         help='Get city and tag counts for all cities.')
 
-    parser.add_argument('-scr', dest='url',
+    parser.add_argument('--scrape', dest='url',
                         help='Glasdoor url to scrape.')
 
     parser.add_argument('-f', dest='filename',
                         help='Filename of scraped data.')
     
-    parser.add_argument('-m', dest='merge', action="store_true",
-                        help='File to merg.')
+    parser.add_argument('--merge', dest='merge',
+                        help='File to merge.')
                         
         
     parser.add_argument('--mailto', dest='mailto', action="store_true",
@@ -105,6 +100,6 @@ def main():
     if args.url:
         scrape_url(args)
     if args.merge:
-        merge_csv_data(args)
+        merge_csv_data(args.merge)
 if __name__ == "__main__":
     main()
