@@ -31,9 +31,9 @@ Service added to send mails to the provided email with the info for the city req
 
 - **argparse** for main program.
 
--**Selenium** and beautifull soup for scrapping glassdoor.
+- **Selenium** and beautifull soup for scrapping glassdoor.
 
--**smtplib** and sendgrid for email service.
+- **smtplib** and sendgrid for email service.
 
 
 
