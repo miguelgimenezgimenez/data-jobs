@@ -1,5 +1,10 @@
-# Programming Jobs in Glassdoor.
+![alt text](What-is-Data-Science.webp "Title")
+
+
+
+# Programming Jobs in Glassdoor.     
 Program to scrape job listings in glassdor by providing a url to the CLI. 
+
 Service added to send mails to the provided email with the info for the city requested.
 
 
